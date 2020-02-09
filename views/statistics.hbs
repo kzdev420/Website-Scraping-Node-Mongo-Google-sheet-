@@ -1,0 +1,32 @@
+<span><b>Total articles</b>: {{total_news_count}}</span>&nbsp;&nbsp;
+<span><b>Total articles (email scrapped)</b>: {{total_news_scrapped_count}}</span>
+<table class="table">
+    <th>
+        <tr>
+            <td>
+                <strong>Outlet</strong>
+            </td>
+            <td>
+                <strong>Articles (Emails Scrapped)</strong>
+            </td>
+            <td>
+                <strong>Articles (Total)</strong>
+            </td>
+        </tr>
+    </th>
+    <tbody>
+        {{#each outlets}}
+        <tr>
+            <td>
+                {{this.name}}
+            </td>
+            <td>
+                {{this.scrapped_count}}
+            </td>
+            <td>
+                {{this.total_count}}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

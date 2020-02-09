@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hootypresshuntarticles",
+  "private_key_id": "57fd41693f0cecc77a536523054db84c3078c23e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCZdGxXV1Ctehgd\njK9mDqLfOcJYu1n8w4aAlkEuDJ1Xbq3TCS5PkPv1NxVCJLaR8qk5ABRr2OCGqpaH\n0oxwcXeYSiY4t2pKc6n2ZWmTy70AEX+7ZtiEbGTWAruO+Z7P7m/xElQd/KVt7Nzd\nIhgMtQIIYV0mmYZi/cj67NLBWFU+GqcYmHMSLq7Ki0WcHP5ssDv+5d/uUsLpA1Zt\n+23Ih2rd7zk50iN+vo5Krp4lPS7sRhPsZlNk/Fvt3KcPQeG9wIlPhls2oUSMioDX\nR6Ab9zVX+ON/2LucFAYMvnAqXftwUAWP8l5vF//4W/ffYvptnm5q/XhwE04UXEaT\nykriAEorAgMBAAECggEAJ4USOdQk1OhyuXl32oK+c1q+sHdfj3cTdp47nw5knxXD\n8muU36zpFpffA6/MzP1/k0xv9e5etI/OQKB6xqKSOEgwW77wwsfS57/qVsPLou7e\nxHaSIFiCB5Oglgu3WLmBXsZnn2lneU3c+55CL1OWeG4KvVwgffH6BpVjGaQUH+/6\ny7GKuoRKl/L+rEbpxHLBxDGJcGI5UWnk7pTgXGYdnO8HthP3DBT5Veno5ulOLNAu\n3z3IXF2536qBp6a6F19ZePNfVhyabGgDPErNpwqhPIcVTsXbMFLhj284IkmWRtAI\n67u+YA5Koq2T4GIVbPasb5pAPLszm5PFdvQUPQooIQKBgQDYIFoqcc3YkBJel72s\nmpXVoB7QdDrW7n9i0stRGU6DM/U72YT4BAx4NbkyAb0bzM9tIfen+CwliFGUaqmO\nw//iDGIjmWsg1CoK9w8lzfrnt14m6yYxIF2Z1uuWejIrIT7kwTz3dzFAOXM7EXK0\ny1/5Hi1L2GJz0Qjac+q3aN56OQKBgQC1xBd6d3C+/OXTw+K7TnCUUFk4w7jyQ3Qc\nfbRzbJk/9EnSlibPE7y2ZAYnuFKGXXaoA00YLM3vBtxhwVEZwvmziyUP8XvnGEph\nuoNgZo2LbukI4F3Qnagi8hKuteDgeLZt9CmlR7vf6rXLymuWjXZ3Y5Wo5FOQ9gKv\nJ5XfmRG3gwKBgAwjnQzfQYGVbgK0ISotsJbEHJb2wEtMMAl774GJm1hRNcf7yrUn\nfQ/PbKx7XoTONyRZERD1Jn2hL3vXldh398pZibWYK2U3pXjiMY6dCCe1q+shsA54\nU+mNIcRc7q5vepncpLD9l92UnH1H2JqBBc33PPISoE0DA61Jb3iHwl85AoGARSsA\nsDbBbbw5DROutQ5NYvMMcMByIaaviaQARigeTSr96KgAzq45EsMPYJAQv1bTr23K\nKZfrKblXpc91uDLs6HjbuqxvNOqWa4gZNFbyKAwlm54dtSQ5dkrd9yP5FhJ5gW/3\nZRDeGoBre8hklp7wZNA9hE6WykQDk3mh27uY9VcCgYBKSlIoREh8Mx6JY6IYX3ra\nrByHDcnPiRdqyJxdFo6SXGkr2qy7t8pGBc+hIbgCw+rhp+6Tvezgqi1+xdMpnJyy\nAVkqvVSybW3Czyip1K9QxT9TxbyV4wKOJ0/fkHYb6/blwhRsFceVk9tIichy1Lss\n+b9JRvcn5R8YtgNA9DsFGg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "press-hunt-scraper@hootypresshuntarticles.iam.gserviceaccount.com",
+  "client_id": "108037782733467461734",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/press-hunt-scraper%40hootypresshuntarticles.iam.gserviceaccount.com"
+}
