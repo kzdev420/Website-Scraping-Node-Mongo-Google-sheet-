@@ -1,5 +1,5 @@
 const NewsAPI = require("newsapi");
-const newsapi = new NewsAPI("bbca8953773448a4ba866cca19c988c0");
+const newsapi = new NewsAPI("6b856245d40748baa2920c8d8c9855ea");
 var saveNews = require("../../controller/saveNews");
 var utils = require("../helpers/utils");
 var async = require("async");
@@ -10,7 +10,7 @@ function callNewsAPI(source, page = 1, date) {
     let nextdate = moment(date, "Y-M-D")
       .add(1, "days")
       .format("Y-M-D");
-    //console.log(date, nextdate, source);
+    console.log(date, nextdate, source);
     var query = {
       sources: source,
       from: date,

@@ -33,7 +33,6 @@ app.use(function(req, res, next) {
 });
 
 mongoose.Promise = global.Promise;
-
 mongoose.connect(process.env.DB_HOST, function(err) {
   if (err) throw err;
   console.log("CONNECTED TO DB!!");

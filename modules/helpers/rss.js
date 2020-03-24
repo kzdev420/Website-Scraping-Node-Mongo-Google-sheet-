@@ -28,7 +28,7 @@ module.exports = {
 
                         // console.log(JSON.stringify(result));
                         resolve($.parser(result));
-                        //console.log(JSON.stringify(result.rss.channel));
+                        console.log(JSON.stringify(result.rss.channel));
                     });
 
                 } else {

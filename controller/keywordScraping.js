@@ -85,13 +85,13 @@ function initiate(news) {
           .process(n.content, function(err, file) {
             if (err) throw err;
             let keyphrases = [];
-            // console.log('Keywords:')
+            console.log('Keywords:')
             file.data.keywords.forEach(function(keyword) {
               keyphrases.push(toString(keyword.matches[0].node));
             });
 
             file.data.keyphrases.forEach(function(phrase) {
-              // console.log(phrase.matches[0].nodes.map(stringify).join(','))
+              console.log(phrase.matches[0].nodes.map(stringify).join(','))
               keyphrases.push(
                 phrase.matches[0].nodes
                   .map(stringify)
@@ -131,7 +131,7 @@ function initiate(news) {
             }
           })
           .catch(err => {
-            // console.log(err);
+            console.log(err);
             extractKeywordsFromContent(n);
             // callback();
           });
@@ -152,7 +152,7 @@ function initiate(news) {
             }
           })
           .catch(err => {
-            // console.log('ERROR', err);
+            console.log('ERROR', err);
             extractKeywordsFromContent(n);
             // callback();
           });

@@ -9,31 +9,47 @@ var doc = new GoogleSpreadsheet('1wkPHlN8cEWDWM-RhvQ4D6mIIpk79jtqUKg2F_PVSVvM');
 //comment for saveNews MH
 function saveNews(articles) {
 
-    // setInterval(() => {
-    //     console.log();
-    // }, 10000);
-
     return new Promise(function(resolve, reject) {
         try {
             let functions = [];
-            let newsOutput = []
-                // console.log(articles.length);
+            let newsOutput = [];
             articles.forEach(function(article) {
                 functions.push(function(callback) {
-                    News.findOne({ title: article.title, source_id: article.source_id }, function(err, news) {
-
+                    News.findOne({ title: article.title, source_id: article.source_id }, async function(err, news) {
                         console.log(article.source_id + ' - News Saved');
                         if (!news) {
-                            //console.log(article)
-                            article.dateDBAdded = Date.now();
-                            let savedNews = new News(article);
-                            savetosheet(article);
-                            savedNews.save(function(err, nws) {
-                                console.log(err, article.source_id + ' - News Saved');
-                                newsOutput.push(nws);
-                                callback();
+                            // var res =await savetosheet(article);
+                            doc.useServiceAccountAuth(creds,async function() {  
+                                await doc.addRow(1, {
+                                    title_t: article.title,
+                                    image: article.image,
+                                    keywords_t: article.keywords,
+                                    content_t: article.content,
+                                    date: article.date,
+                                    url: article.url,
+                                    source_name: article.source_name,
+                                    source_id: article.source_id,
+                                    author_id: article.author_id,
+                                    author_name: article.author_name,
+                                    scraped: article.scraped,
+                                    author_email_scraped: article.author_email_scraped,
+                                    genre: article.genre,
+                                    email: article.email
+                                }, function (err) {
+                                    if (err) {
+                                        callback();
+                                    } else{
+                                        article.dateDBAdded = Date.now();
+                                        let savedNews = new News(article);
+                                        savedNews.save(function(err, nws) {
+                                            console.log(err, article.source_id + ' - News Saved');
+                                            newsOutput.push(nws);
+                                            callback();
+                                        });
+                                        sendToGoogle(article);
+                                    }
+                                });
                             });
-                            sendToGoogle( article);
                         } else {
                             callback();
                         }
@@ -47,14 +63,12 @@ function saveNews(articles) {
         } catch (e) {
             console.log('save news Promise error', e);
         }
-
     })
-
 }
 
 function savetosheet(article){
-    doc.useServiceAccountAuth(creds,function() {  
-        doc.addRow(1, {
+    doc.useServiceAccountAuth(creds,async function() {  
+        await doc.addRow(1, {
             title_t: article.title,
             image: article.image,
             keywords_t: article.keywords,
@@ -71,11 +85,11 @@ function savetosheet(article){
             email: article.email
         }, function (err) {
             if (err) {
-                console.log(err);
+                return false;
             }
         });
     });
-    return;
+    return true;
 }
 
 async function iterateNews(response) {

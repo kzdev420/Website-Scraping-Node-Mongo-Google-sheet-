@@ -3,6 +3,7 @@ var later = require("later");
 var async = require("async");
 var keywordScraping = require("../../controller/keywordScraping");
 var moment = require("moment");
+// var sources = require("../../controller/getSources");
 
 function scheduleScraping(text) {
   if (text) {
@@ -16,7 +17,7 @@ function scheduleScraping(text) {
 }
 
 function scrapeNews() {
-  // console.log('SCRAPE NEWS');
+  console.log('SCRAPE NEWS');
   let functions = [];
   newsOutlets.forEach(Outlet => {
     functions.push(function(callback) {
@@ -35,6 +36,46 @@ function scrapeNews() {
   async.series(functions, function(err, result) {
     console.log("SCRAPPING DONE!!! for" + moment().format("llll"));
     let source_ids = [
+      "abc_news",
+      "al_jazeera_english",
+      "ars_technica",
+      "associated_press",
+      "axios",
+      "bleacher_report",
+      "breitbart_news",
+      "buzzfeed",
+      "cbs_news",
+      "cnn",
+      "crypto_coins_news",
+      "entertainment_weekly",
+      "espn",
+      "espn_cric_info",
+      "fox_news",
+      "fox_sports",
+      "google_news",
+      "ign",
+      "msnbc",
+      "mtv_news",
+      "medical_news_today",
+      "national_geographic",
+      "national_review",
+      "nbc_news",
+      "newsweek",
+      "new_scientist",
+      "new_york_magazine",
+      "next_big_future",
+      "nfl_news",
+      "nhl_news",
+      "politico",
+      "polygon",
+      "reddit_r_all",
+      "the_american_conservative",
+      "the_hill",
+      "the_verge",
+      "the_washington_post",
+      "the_washington_times",
+      "time",
+      
       "bloomberg",
       "business-insider",
       "cnbc",
