@@ -38,6 +38,6 @@
         "rss-to-json": "^1.0.4",
         "string-score": "^1.0.1",
         "string-similarity": "^2.0.0",
-        "underscore": "^1.9.1"
+        "underscore": "^1.12.1"
     }
 }
